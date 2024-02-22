@@ -1,35 +1,22 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-import Logo from "./assets/logo.jpg";
+import Logo from "../novo/src/assets/logo.png";
 import { Feather, AntDesign, FontAwesome5 } from '@expo/vector-icons';
+import Header from './src/components/Header';
 
 export default function App() {
   return (
 
     <View style={{marginVertical: 32, marginHorizontal: 16, flex:1}}>
-      <View 
-      style={{
-        flexDirection:"row",
-        justifyContent:"space-between",
-        width:"100%",
-        alignItems:"center"
-      }}>
-     <Image style={{height:60 , width:200}} source={Logo}/>
-     <View style={{flexDirection: "row"}}/>
-      <TouchableOpacity>
-      <Feather name="message-circle" size={24} color="black" />
-      </TouchableOpacity><FontAwesome5 name="heart" size={24} color="black" />
-      
-      </View>
-      <ScrollView contentContainerStyle={{
+      <Header />
+      <ScrollView 
+      contentContainerStyle={{
         gap:8,
         height:100,
       
       }}
       horizontal
        style={{flexDirection: "row"}}
-       showsHorizontalScrollIndicator={false}
-       
-       >
+       showsHorizontalScrollIndicator={false}>
         <TouchableOpacity>
         <Image
         style={{width:100, height:100, borderRadius:50}}
@@ -59,7 +46,7 @@ export default function App() {
          <Image 
         style={{width:100, height:100,borderRadius:50}}
         source={{
-          uri:"data:image/jpeg;base64,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"
+          uri:"https://static1.minhavida.com.br/articles/64/fe/df/e8/mediabox-pessoas-sempre-insatisfeitas-orig-1.jpg"
         }}/>
         </TouchableOpacity>
         <TouchableOpacity>

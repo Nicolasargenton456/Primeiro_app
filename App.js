@@ -1,7 +1,7 @@
 import { View , StyleSheet } from 'react-native';
 import InfoProfile from './src/components/InfoProfile';
 import Perfil from './src/assets/Homem.jpg';
-
+import MyPosts from './src/components/MyPosts';
 
 export default function App() {
   return (
@@ -14,6 +14,9 @@ export default function App() {
       following={6} 
       Description="lorem lorem lorem "
       />
+    <MyPosts 
+    image={Perfil}
+    />
     </View>
   );
 }

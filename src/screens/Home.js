@@ -1,8 +1,8 @@
 import { View , StyleSheet } from 'react-native';
-import Header from './src/components/Header';
-import Storys from './src/components/Storys';
+import Header from '../components/Header';
+import Storys from '../components/Storys';
 
-export default function App() {
+export default function Home() {
   return (
 
     <View style={{marginVertical: 32, marginHorizontal: 16, flex:1}}>

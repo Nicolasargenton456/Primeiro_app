@@ -17,6 +17,7 @@ export default function Profile() {
     <MyPosts 
     image={Perfil}
     />
+    
     </View>
   );
 }
